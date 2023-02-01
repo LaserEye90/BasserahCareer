@@ -20,7 +20,7 @@ app.post('/', (req, res) => {
         file.mv(`${__dirname}/store/${fileName}`, err => {
             if (err) {
                 console.log(err)
-                res.send('There is error')
+                res.send('There is error' , err)
             } else {
                 res.send('uploaded successfully')
             }
