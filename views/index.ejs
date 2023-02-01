@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"  />
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+
+
+    <div class="form">
+        <div class="title">Welcome</div>
+        <div class="subtitle">Let's submit your Application!</div>
+        <div class="input-container ic1">
+          <input id="firstname" class="input" type="text" placeholder=" " />
+          <div class="cut"></div>
+          <label for="firstname" class="placeholder">First name</label>
+        </div>
+
+
+        <div class="input-container ic1">
+          <input id="email" class="input" type="text" placeholder=" " />
+          <div class="cut cut-short"></div>
+          <label for="email" class="placeholder">Email</>
+        </div>
+		
+		
+        <div class="input-container ic1 ">
+          <input id="phone" class="input Phone_Lable" type="tel" placeholder=" " />
+          <div class="cut"></div>
+          <label for="phone" class="placeholder">&emsp;&emsp; Phone Number</label>
+        </div>
+		
+		
+
+        <div class="input-container ic2">
+            <!-- <h3>Upload files</h3> -->
+            <!-- <form action="/" method="POST" enctype="multipart/form-data"> -->
+			<form action="/"  method="POST" enctype="multipart/form-data">
+                <input type="file" class="input File_button" name="file">
+                <button class="submit">Upload </button>
+            </form>
+          </div>
+
+
+        <!-- <button type="text" >submit</button> -->
+      </div>
+
+
+
+                <script>
+                    const phoneInputField = document.querySelector("#phone");
+                    const phoneInput = window.intlTelInput(phoneInputField, {
+                    utilsScript:"https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",   
+                    separateDialCode: false,
+                    hiddenInput: "mobileNumber",
+                    preferredCountries: ["sa"]
+                    
+                    });
+                </script>
+    </div>
+
+</body>
+
+</html>
