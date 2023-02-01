@@ -29,6 +29,6 @@ app.post('/', (req, res) => {
         res.send('There are no files')
     }
 })
-app.listen(5000, () => {
+app.listen(process.env.PORT, () => {
     console.log('server started')
 })
