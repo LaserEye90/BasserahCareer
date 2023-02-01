@@ -19,8 +19,8 @@ app.post('/', (req, res) => {
         const fileName = file.name
         file.mv(`${__dirname}/store/${fileName}`, err => {
             if (err) {
-                console.log(err)
-                res.send('There is error' , err)
+                console.log('Here is The Error : ',err)
+                res.send('There is error' )
             } else {
                 res.send('uploaded successfully')
             }
